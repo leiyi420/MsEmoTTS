@@ -4,12 +4,12 @@
     
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Hierarchical</title>
+<title>Hierarchical Emotion Transfer, Prediction, and Control for Emotional Speech Synthesis</title>
 <meta name="generator" content="Jekyll v3.9.0">
 <meta property="og:title" content="TODO: title">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://syang1993.github.io/test/">
-<meta property="og:url" content="https://syang1993.github.io/test/">
+<link rel="canonical" href="https://leiyi420.github.io/HierarchicalEmoTTS/">
+<meta property="og:url" content="https://leiyi420.github.io/HierarchicalEmoTTS/">
 <meta name="twitter:card" content="summary">
 <!-- End Jekyll SEO tag -->
 
@@ -26,14 +26,14 @@
     </section>
 
 <section class="main-content">
-      <h1 id=""><center> Improving Low Bit-Rate Speech Coding With GAN-based Speech Reconstruction</center></h1>
+      <h1 id=""><center>Hierarchical Emotion Transfer, Prediction, and Control for Emotional Speech Synthesis</center></h1>
 
-<center> Shan Yang, Shi-Xiong ZHANG, Yi Chen, Dan Su, Dong Yu </center>
-<center> Tencent AI Lab</center>
+<center> Yi Lei, Shan Yang, Xinsheng Wang, Lei Xie  </center>
+<center> Northwestern Polytechnical University </center>
 
 
 <h2 id="abstract">Abstract</h2>
-<p> In order to represent and transmit speech signals efficiently, speech codecs tend to compress speech into compact bit-streams, which are then decoded in the down-stream receivers to maintain the perceptual quality as much as possible. Traditional speech codecs require a high bit-rate to recover the quality of source speech, which leads to extra transmission costs. In this paper, we propose a GAN-based speech reconstruction module to repair the speech loss caused by low bit-rate speech coding. The proposed method devises an encoder to extract abstract information from lossy speech, and a decoder to compensate the perceptual information with generative adversarial networks during reconstructing process. Experimental results show that the proposed model significantly improves the quality of lossy speech from Opus at different low bit-rates, and it is also robust to unseen speakers. Our work provides an alternative and backward-compatible way to achieve low bit-rate coding with high reconstructing quality. Unlike the recent low bit-rate neural generative codecs, the proposed method does not break the existing speech coding diagram in real applications.
+<p> Expressive synthetic speech is important for many human-computer interactions and audio broadcast scenarios, and thus synthesizing expressive speech has attracted much attention in recent years. Previous methods performed the expressive speech synthesis either with explicit labels or with a fixed-length style embedding extracted from reference audio, both of which can only learn an average style and thus ignores the hierarchical nature of prosody. In this paper, we propose a hierarchical emotional speech synthesis framework to model the emotion from different levels. Specifically, the proposed method is a typical attention-based sequence-to-sequence model but with proposed three modules, including global-level emotion presenting module (GM),  utterance-level emotion presenting module (UM), and local-level emotion presenting module (LM), to model the global emotion category,  utterance-level emotion variation, and syllable-level emotion strength, respectively. In addition to modeling the emotion from different levels, the proposed method also allows us to synthesize emotional speech in different ways, i.e., transferring the emotion from reference audio, predicting the emotion from the input text, and controlling the emotion manually. Extensive experiments conducted on a Chinese emotional speech corpus demonstrate that the proposed method outperforms the compared reference audio-based and text-based emotional speech synthesis methods on the emotion transfer speech synthesis and text-based emotion prediction speech synthesis respectively. Besides, the experiments also show that the proposed method can control the emotion expressions flexibly. Detail analysis is conducted to show the effectiveness of each module and the good design of the proposed method.
 </p>
 <br><br>
 
