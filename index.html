@@ -37,133 +37,162 @@
 </p>
 <br><br>
 
-<h4>( Opus works in CBR mode with 10ms frame size.)</h4>
+<h4> Demos </h4>
 
-<a name="1"><h2>1. StudioSpeech</h2></a>
+<a name="1"><h2>1. Emotional speech synthesis by emotion transfer</h2></a>
+<h4>Parallel emotion transfer.</h4>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>Bit rate</strong></th>
-      <th style="text-align: center"><strong>Source speech</strong></th>
-      <th style="text-align: center"><strong>Opus codec</strong></th>
-      <th style="text-align: center"><strong>GAN reconstruction</strong></th>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST</strong></th>
+      <th style="text-align: center"><strong>Proposed</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left" rowspan=2>4 kb/s</td>
+      <td style="text-align: left">Happiness</td>
       <td style="text-align: left"><audio src="samples/studio/reference/female1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-4k/female1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/female1.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
+      <td style="text-align: left">Anger</td>
       <td style="text-align: left"><audio src="samples/studio/reference/male1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-4k/male1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/male1.wav" controls="" preload=""></audio></td>
     </tr>
       <tr>
-      <td style="text-align: left" rowspan=2>6 kb/s</td>
+      <td style="text-align: left">Sadness</td>
       <td style="text-align: left"><audio src="samples/studio/reference/female2.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-6k/female2.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/female2.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
+      <td style="text-align: left">Surprise</td>
       <td style="text-align: left"><audio src="samples/studio/reference/male2.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-6k/male2.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/male2.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
-      <td style="text-align: left" rowspan=2>8 kb/s</td>
+      <td style="text-align: left">Fear</td>
       <td style="text-align: left"><audio src="samples/studio/reference/female3.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-8k/female3.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/female3.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
+      <td style="text-align: left">Disgust</td>
       <td style="text-align: left"><audio src="samples/studio/reference/male3_1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-8k/male3_1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/male3_1.wav" controls="" preload=""></audio></td>
     </tr>
-   <tr>
-      <td style="text-align: left" rowspan=2>10 kb/s</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female4.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-10k/female4.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-10k/female4.wav" controls="" preload=""></audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><audio src="samples/studio/reference/male3_2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-10k/male3_2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-10k/male3_2.wav" controls="" preload=""></audio></td>
-    </tr>
-
+   
   </tbody>
 </table>
-<br>
-<a name="2"><h2>2. AudioBook</h2></a>
-<h4>GAN-mix: bit-rate independent model.</h4>
+
+<h4>Non-parallel emotion transfer.</h4>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>Bit rate</strong></th>
-      <th style="text-align: center"><strong>Source speech</strong></th>
-      <th style="text-align: center"><strong>Opus codec</strong></th>
-      <th style="text-align: center"><strong>GAN reconstruction</strong></th>
-      <th style="text-align: center"><strong>GAN-mix reconstruction</strong></th>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST</strong></th>
+      <th style="text-align: center"><strong>Proposed</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left" rowspan=2>4 kb/s</td>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/672-122797-0011.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-4k/672-122797-0011.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-4k/672-122797-0011.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-4k/672-122797-0011.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-4k/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/female1.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/7729-102255-0030.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-4k/7729-102255-0030.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-4k/7729-102255-0030.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-4k/7729-102255-0030.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Anger</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-4k/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/male1.wav" controls="" preload=""></audio></td>
     </tr>
       <tr>
-      <td style="text-align: left" rowspan=2>6 kb/s</td>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/1284-1180-0028.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-6k/1284-1180-0028.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-6k/1284-1180-0028.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-6k/1284-1180-0028.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Sadness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-6k/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/female2.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/7021-79759-0002.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-6k/7021-79759-0002.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-6k/7021-79759-0002.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-6k/7021-79759-0002.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-6k/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/male2.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
-      <td style="text-align: left" rowspan=2>8 kb/s</td>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/672-122797-0028.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-8k/672-122797-0028.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-8k/672-122797-0028.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-8k/672-122797-0028.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Fear</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-8k/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/female3.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/8230-279154-0035.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-8k/8230-279154-0035.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-8k/8230-279154-0035.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-8k/8230-279154-0035.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Disgust</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-8k/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/male3_1.wav" controls="" preload=""></audio></td>
     </tr>
-   <tr>
-      <td style="text-align: left" rowspan=2>10 kb/s</td>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/4507-16021-0001.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-10k/4507-16021-0001.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-10k/4507-16021-0001.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-10k/4507-16021-0001.wav" controls="" preload=""></audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><audio src="samples/audiobook/reference/908-31957-0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-10k/908-31957-0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-10k/908-31957-0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/audiobook/opus-gan-mix-10k/908-31957-0005.wav" controls="" preload=""></audio></td>
-    </tr>
+   
+  </tbody>
+</table>
 
+
+<br>
+<a name="2"><h2>2. Emotional speech synthesis by emotion prediction</h2></a>
+<h4>GAN-mix: bit-rate independent model.</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST</strong></th>
+      <th style="text-align: center"><strong>Proposed</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-4k/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/female1.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-4k/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/male1.wav" controls="" preload=""></audio></td>
+    </tr>
+      <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-6k/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/female2.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-6k/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/male2.wav" controls="" preload=""></audio></td>
+    </tr>
+   <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-8k/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/female3.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/studio/reference/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-8k/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/male3_1.wav" controls="" preload=""></audio></td>
+    </tr>
+   
   </tbody>
 </table>
 
