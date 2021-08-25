@@ -35,12 +35,13 @@
 <h2 id="abstract">Abstract</h2>
 <p> Expressive synthetic speech is important for many human-computer interactions and audio broadcast scenarios, and thus synthesizing expressive speech has attracted much attention in recent years. Previous methods performed the expressive speech synthesis either with explicit labels or with a fixed-length style embedding extracted from reference audio, both of which can only learn an average style and thus ignores the hierarchical nature of prosody. In this paper, we propose a hierarchical emotional speech synthesis framework to model the emotion from different levels. Specifically, the proposed method is a typical attention-based sequence-to-sequence model but with proposed three modules, including global-level emotion presenting module (GM),  utterance-level emotion presenting module (UM), and local-level emotion presenting module (LM), to model the global emotion category,  utterance-level emotion variation, and syllable-level emotion strength, respectively. In addition to modeling the emotion from different levels, the proposed method also allows us to synthesize emotional speech in different ways, i.e., transferring the emotion from reference audio, predicting the emotion from the input text, and controlling the emotion manually. Extensive experiments conducted on a Chinese emotional speech corpus demonstrate that the proposed method outperforms the compared reference audio-based and text-based emotional speech synthesis methods on the emotion transfer speech synthesis and text-based emotion prediction speech synthesis respectively. Besides, the experiments also show that the proposed method can control the emotion expressions flexibly. Detail analysis is conducted to show the effectiveness of each module and the good design of the proposed method.
 </p>
+	<center><img src='fig/achitechture-overview.jpg'></center>
 <br><br>
 
-<h4> Demos </h4>
+<h2> Demos </h2>
 
 <a name="1"><h2>1. Emotional speech synthesis by emotion transfer</h2></a>
-<h4>Parallel emotion transfer.</h4>
+<h4>Parallel emotion transfer</h4>
 <table>
   <thead>
     <tr>
@@ -53,45 +54,45 @@
   <tbody>
     <tr>
       <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-4k/female1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/reference/211851.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/baseline-gst/211851.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/proposed/211851.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">Anger</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-4k/male1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/reference/221401.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/baseline-gst/221401.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/proposed/221401.wav" controls="" preload=""></audio></td>
     </tr>
       <tr>
       <td style="text-align: left">Sadness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-6k/female2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/reference/230872.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/baseline-gst/230872.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/proposed/230872.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">Surprise</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-6k/male2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/reference/240884.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/baseline-gst/240884.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/proposed/240884.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
       <td style="text-align: left">Fear</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-8k/female3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/reference/251177.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/baseline-gst/251177.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/proposed/251177.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">Disgust</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male3_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-8k/male3_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/reference/261013.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/baseline-gst/261013.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/parallel/proposed/261013.wav" controls="" preload=""></audio></td>
     </tr>
    
   </tbody>
 </table>
 
-<h4>Non-parallel emotion transfer.</h4>
+<h4>Non-parallel emotion transfer</h4>
 <table>
   <thead>
     <tr>
@@ -104,39 +105,39 @@
   <tbody>
     <tr>
       <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-4k/female1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/reference/221222-211926.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/baseline-gst/221222-211926.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/proposed/221222-211926.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">Anger</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-4k/male1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/reference/231468-221222.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/baseline-gst/231468-221222.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/proposed/231468-221222.wav" controls="" preload=""></audio></td>
     </tr>
       <tr>
       <td style="text-align: left">Sadness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-6k/female2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/reference/210177-231468.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/baseline-gst/210177-231468.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/proposed/210177-231468.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">Surprise</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-6k/male2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/reference/230722-241686.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/baseline-gst/230722-241686.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/proposed/230722-241686.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
       <td style="text-align: left">Fear</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-8k/female3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/reference/221323-250188.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/baseline-gst/221323-250188.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/proposed/221323-250188.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
       <td style="text-align: left">Disgust</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male3_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-8k/male3_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/reference/210177-260451.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/baseline-gst/210177-260451.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion transfer/non-parallel/proposed/210177-260451.wav" controls="" preload=""></audio></td>
     </tr>
    
   </tbody>
@@ -145,56 +146,261 @@
 
 <br>
 <a name="2"><h2>2. Emotional speech synthesis by emotion prediction</h2></a>
-<h4>GAN-mix: bit-rate independent model.</h4>
+
 <table>
   <thead>
     <tr>
       <th style="text-align: center"><strong>Emotion</strong></th>
-      <th style="text-align: center"><strong>Reference</strong></th>
-      <th style="text-align: center"><strong>GST</strong></th>
+      <th style="text-align: center"><strong>TPSE-GST</strong></th>
       <th style="text-align: center"><strong>Proposed</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-4k/female1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/female1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/tp-gst/220265.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/220265.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
-      <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-4k/male1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-4k/male1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Anger</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/tp-gst/240344.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/240344.wav" controls="" preload=""></audio></td>
     </tr>
       <tr>
-      <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-6k/female2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/female2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Sadness</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/tp-gst/230246.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/230246.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
-      <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-6k/male2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-6k/male2.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/tp-gst/210365.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/210365.wav" controls="" preload=""></audio></td>
     </tr>
    <tr>
-      <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/female3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-8k/female3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/female3.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Fear</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/tp-gst/260465.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/260465.wav" controls="" preload=""></audio></td>
     </tr>
     <tr>
-      <td style="text-align: left">Happiness</td>
-      <td style="text-align: left"><audio src="samples/studio/reference/male3_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-8k/male3_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/studio/opus-gan-8k/male3_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left">Disgust</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/tp-gst/250465.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/250465.wav" controls="" preload=""></audio></td>
     </tr>
    
   </tbody>
 </table>
+
+
+<br>
+<a name="3"><h2>3. Emotional speech synthesis by emotion control</h2></a>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>All strengths 0</strong></th>
+      <th style="text-align: center"><strong>All strengths 1</strong></th>
+      <th style="text-align: center"><strong>Strength increasing</strong></th>
+	  <th style="text-align: center"><strong>Strength decreasing</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/21-211448_0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/21-211448_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/g/21-211448_gu.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left"><audio src="samples/emotion control/g/21-211448_gd.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Anger</td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/22-211448_0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/22-211448_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/g/22-211448_gu.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left"><audio src="samples/emotion control/g/22-211448_gd.wav" controls="" preload=""></audio></td>
+    </tr>
+      <tr>
+      <td style="text-align: left">Sadness</td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/23-211448_0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/23-211448_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/g/23-211448_gu.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left"><audio src="samples/emotion control/g/23-211448_gd.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/24-211448_0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/24-211448_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/g/24-211448_gu.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left"><audio src="samples/emotion control/g/24-211448_gd.wav" controls="" preload=""></audio></td>
+    </tr>
+   <tr>
+      <td style="text-align: left">Fear</td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/25-211448_0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/25-211448_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/g/25-211448_gu.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left"><audio src="samples/emotion control/g/25-211448_gd.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Disgust</td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/26-211448_0.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/01/26-211448_1.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion control/g/26-211448_gu.wav" controls="" preload=""></audio></td>
+	  <td style="text-align: left"><audio src="samples/emotion control/g/26-211448_gd.wav" controls="" preload=""></audio></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+<br><br>
+<h2> Component analysis </h2>
+
+<a name="1"><h2>1. Global-level emotion presenting module (GM)</h2></a>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>P-h</strong></th>
+      <th style="text-align: center"><strong>Proposed</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/pred-id/220265.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/220265.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Anger</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/pred-id/240344.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/240344.wav" controls="" preload=""></audio></td>
+    </tr>
+      <tr>
+      <td style="text-align: left">Sadness</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/pred-id/230246.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/230246.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/pred-id/210365.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/210365.wav" controls="" preload=""></audio></td>
+    </tr>
+   <tr>
+      <td style="text-align: left">Fear</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/pred-id/260465.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/260465.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Disgust</td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/pred-id/250465.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/emotion prediction/propose-weights/250465.wav" controls="" preload=""></audio></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+<a name="1"><h2>2. Utterance-level emotion presenting module (UM)</h2></a>
+<h4>Parallel emotion transfer</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>w/o UM</strong></th>
+      <th style="text-align: center"><strong>w UM</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/um/parallel/reference/211448.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/baseline/211448.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/proposed/211448.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Anger</td>
+      <td style="text-align: left"><audio src="samples/um/parallel/reference/221401.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/baseline/221401.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/proposed/221401.wav" controls="" preload=""></audio></td>
+    </tr>
+      <tr>
+      <td style="text-align: left">Sadness</td>
+      <td style="text-align: left"><audio src="samples/um/parallel/reference/231744.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/baseline/231744.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/proposed/231744.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/um/parallel/reference/240890.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/baseline/240890.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/proposed/240890.wav" controls="" preload=""></audio></td>
+    </tr>
+   <tr>
+      <td style="text-align: left">Fear</td>
+      <td style="text-align: left"><audio src="samples/um/parallel/reference/251190.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/baseline/251190.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/proposed/251190.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Disgust</td>
+      <td style="text-align: left"><audio src="samples/um/parallel/reference/261493.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/baseline/261493.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/parallel/proposed/261493.wav" controls="" preload=""></audio></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+<h4>Non-parallel emotion transfer</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Emotion</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>w/o UM</strong></th>
+      <th style="text-align: center"><strong>w UM</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Happiness</td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/reference/221222-211926.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/baseline/221222-211926.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/proposed/221222-211926.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Anger</td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/reference/211926-221323.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/baseline/211926-221323.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/proposed/211926-221323.wav" controls="" preload=""></audio></td>
+    </tr>
+      <tr>
+      <td style="text-align: left">Sadness</td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/reference/210177-231468.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/baseline/210177-231468.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/proposed/210177-231468.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Surprise</td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/reference/261429-241686.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/baseline/261429-241686.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/proposed/261429-241686.wav" controls="" preload=""></audio></td>
+    </tr>
+   <tr>
+      <td style="text-align: left">Fear</td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/reference/260451-250944.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/baseline/260451-250944.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/proposed/260451-250944.wav" controls="" preload=""></audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Disgust</td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/reference/210177-260451.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/baseline/210177-260451.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/um/non-parallel/proposed/210177-260451.wav" controls="" preload=""></audio></td>
+    </tr>
+   
+  </tbody>
+</table>
+
 
       <footer class="site-footer">
         
