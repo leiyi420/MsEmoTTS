@@ -41,7 +41,8 @@
   <li><a href="#um">Utterance-level emotion presenting module (UM)</a></li>
 </ol>
 
-<h2 id="abstract">Abstract<a name="abstract"></a></h2>
+<br><br>
+<h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
 <p> Expressive synthetic speech is essential for many human-computer interaction and audio broadcast scenarios, and thus synthesizing expressive speech has attracted much attention in recent years. Previous methods performed the expressive speech synthesis either with explicit labels or with a fixed-length style embedding extracted from reference audio, both of which can only learn an average style and thus ignores the hierarchical nature of speech prosody. In this paper, we propose HiEmoTTS, a hierarchical emotional speech synthesis framework, to model the emotion from different levels. Specifically, the proposed method is a typical attention-based sequence-to-sequence model but with proposed three modules, including global-level emotion presenting module (GM), utterance-level emotion presenting module (UM), and local-level emotion presenting module (LM), to model the global emotion category, utterance-level emotion variation, and syllable-level emotion strength, respectively. In addition to modeling the emotion from different levels, the proposed method also allows us to synthesize emotional speech in different ways, i.e., transferring the emotion from reference audio, predicting the emotion from input text, and controlling the emotion strength manually. Extensive experiments conducted on a Chinese emotional speech corpus demonstrate that the proposed method outperforms the compared reference audio-based and text-based emotional speech synthesis methods on the emotion transfer speech synthesis and text-based emotion prediction speech synthesis respectively. Besides, the experiments also show that the proposed method can control the emotion expressions flexibly. Detail analysis is conducted to show the effectiveness of each module and the good design of the proposed method.
 </p>
 	<center><img src='fig/achitechture-overview.jpg'></center>
@@ -49,7 +50,7 @@
 
 <h2> Demos </h2>
 
-<h2>1. Emotional speech synthesis by transferring the emotion from reference audio<a name="transfer"></a></h2>
+<h2>2. Emotional speech synthesis by transferring the emotion from reference audio<a name="transfer"></a></h2>
 <h3>Corresponding to section 5.1 in our paper, below lists the samples that are synthesized for evaluations on emotion transfer task. We compared HiEmoTTS (proposed) with the GST model on both parallel and non-parallel emotion transfer.</h3>
 <p>Parallel emotion transfer: target emotion and text input are from the same refrence signal.</p>
 <table>
@@ -191,7 +192,7 @@
 
 
 <br><br>
-<h2>2. Emotional speech synthesis by predicting the emotion from input text<a name="prediction"></a></h2>
+<h2>3. Emotional speech synthesis by predicting the emotion from input text<a name="prediction"></a></h2>
 <h3>Corresponding to section 5.2 in our paper, below lists the samples that are synthesized for evaluations on emotion prediction from input text only. We compared HiEmoTTS (proposed) with the TPSE-GST model.</h3>
 
 <table>
@@ -257,7 +258,7 @@
 
 
 <br><br>
-<h2>3. Emotional speech synthesis by manual control<a name="control"></a></h2>
+<h2>4. Emotional speech synthesis by manual control<a name="control"></a></h2>
 <h3>Corresponding to section 5.3 in our paper, below lists the samples that are synthesized for presenting the ability of emotional speech synthesis by manual control. For the same input text, different global emotion categories and local emtion strengths are utilized to synthesize emotional speech with different expressions.
 ''All strengths 0'' and ''All strengths 1'' below represent all syllabel strengths in the utterance are appointed to 0 or 1 for the manual labels in emotional TTS.
 ''Strength increasing'' and ''Strength decreasing'' below represent local emotion strengths gradually increase or decrease within an utterance.</h3>
@@ -365,7 +366,7 @@
 </table>
 
 <br><br>
-<h2> 4. Component analysis - Global-level emotion presenting module (GM)<a name="gm"></a></h2>
+<h2> 5. Component analysis - Global-level emotion presenting module (GM)<a name="gm"></a></h2>
 <h3>Corresponding to section 6.1 in our paper, below lists the samples that are synthesized for evaluations on GM. We compared the consistency of the generated emotion expressions with input text of our proposed ''soft'' emotion embeddings and the conventional ''hard'' emotion embeddings in emotion prediction. ''P-h'' represents the model as same as our proposed model except the global emotion renders are conventional ''hard'' emotion embeddings.</h3>
 <table>
   <thead>
@@ -429,7 +430,7 @@
 </table>
 
 <br><br>
-<h2> 5. Component analysis - Utterance-level emotion presenting module (UM)<a name="um"></a></h2>
+<h2> 6. Component analysis - Utterance-level emotion presenting module (UM)<a name="um"></a></h2>
 <h3>Corresponding to section 6.2 in our paper, below lists the samples that are synthesized for evaluating the effectiveness of UM. ''w/o'' means without and ''w'' mean with. We compare the similarity of generated emotion expressions from reference audio on emotion transfer task.</h3>
 <p>Parallel emotion transfer</p>
 <table>
