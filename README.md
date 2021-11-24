@@ -1,1 +1,1 @@
-# HierarchicalEmoTTS
+# Multi-scaleEmoTTS
