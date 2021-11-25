@@ -4,7 +4,7 @@
     
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Hierarchical Emotion Transfer, Prediction, and Control for Emotional Speech Synthesis</title>
+<title>MsEmoTTS: Multi-scale emotion transfer, prediction, and control for emotional speech synthesis</title>
 <meta name="generator" content="Jekyll v3.9.0">
 <meta property="og:title" content="TODO: title">
 <meta property="og:locale" content="en_US">
@@ -26,7 +26,7 @@
     </section>
 
 <section class="main-content">
-      <h1 id=""><center>HiEmoTTS: Hierarchical Emotion Transfer, Prediction, and Control for Emotional Speech Synthesis</center></h1>
+      <h1 id=""><center>MsEmoTTS: Multi-scale emotion transfer, prediction, and control for emotional speech synthesis</center></h1>
 
 <center> Yi Lei, Shan Yang, Xinsheng Wang, Lei Xie  </center>
 <center> Northwestern Polytechnical University </center>
@@ -43,13 +43,13 @@
 
 <br><br>
 <h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
-<p> Expressive synthetic speech is essential for many human-computer interaction and audio broadcast scenarios, and thus synthesizing expressive speech has attracted much attention in recent years. Previous methods performed the expressive speech synthesis either with explicit labels or with a fixed-length style embedding extracted from reference audio, both of which can only learn an average style and thus ignores the hierarchical nature of speech prosody. In this paper, we propose HiEmoTTS, a hierarchical emotional speech synthesis framework, to model the emotion from different levels. Specifically, the proposed method is a typical attention-based sequence-to-sequence model but with proposed three modules, including global-level emotion presenting module (GM), utterance-level emotion presenting module (UM), and local-level emotion presenting module (LM), to model the global emotion category, utterance-level emotion variation, and syllable-level emotion strength, respectively. In addition to modeling the emotion from different levels, the proposed method also allows us to synthesize emotional speech in different ways, i.e., transferring the emotion from reference audio, predicting the emotion from input text, and controlling the emotion strength manually. Extensive experiments conducted on a Chinese emotional speech corpus demonstrate that the proposed method outperforms the compared reference audio-based and text-based emotional speech synthesis methods on the emotion transfer speech synthesis and text-based emotion prediction speech synthesis respectively. Besides, the experiments also show that the proposed method can control the emotion expressions flexibly. Detail analysis is conducted to show the effectiveness of each module and the good design of the proposed method.
+<p> Expressive synthetic speech is essential for many human-computer interaction and audio broadcast scenarios, and thus synthesizing expressive speech has attracted much attention in recent years. Previous methods performed the expressive speech synthesis either with explicit labels or with a fixed-length style embedding extracted from reference audio, both of which can only learn an average style and thus ignores the multi-scale nature of speech prosody. In this paper, we propose MsEmoTTS, a multi-scale emotional speech synthesis framework, to model the emotion from different levels. Specifically, the proposed method is a typical attention-based sequence-to-sequence model but with proposed three modules, including global-level emotion presenting module (GM), utterance-level emotion presenting module (UM), and local-level emotion presenting module (LM), to model the global emotion category, utterance-level emotion variation, and syllable-level emotion strength, respectively. In addition to modeling the emotion from different levels, the proposed method also allows us to synthesize emotional speech in different ways, i.e., transferring the emotion from reference audio, predicting the emotion from input text, and controlling the emotion strength manually. Extensive experiments conducted on a Chinese emotional speech corpus demonstrate that the proposed method outperforms the compared reference audio-based and text-based emotional speech synthesis methods on the emotion transfer speech synthesis and text-based emotion prediction speech synthesis respectively. Besides, the experiments also show that the proposed method can control the emotion expressions flexibly. Detail analysis is conducted to show the effectiveness of each module and the good design of the proposed method.
 </p>
 	<center><img src='fig/achitechture-overview.jpg'></center>
 <br><br>
 
 <h2>2. Demos -- Emotional speech synthesis by transferring the emotion from reference audio<a name="transfer"></a></h2>
-<h3>Corresponding to Section 5.1 in our paper, below lists the samples that are synthesized for evaluations on the emotion transfer task. We compared HiEmoTTS (proposed) with the GST model on both parallel and non-parallel emotion transfer.</h3>
+<h3>Corresponding to Section 5.1 in our paper, below lists the samples that are synthesized for evaluations on the emotion transfer task. We compared MsEmoTTS (proposed) with the GST model on both parallel and non-parallel emotion transfer.</h3>
 <p>Parallel emotion transfer: the input text is the same as the transcription of reference audio.</p>
 <table>
   <thead>
@@ -57,7 +57,7 @@
       <th style="text-align: center"><strong>Emotion</strong></th>
       <th style="text-align: center"><strong>Reference</strong></th>
       <th style="text-align: center"><strong>GST</strong></th>
-      <th style="text-align: center"><strong>HiEmoTTS (Proposed)</strong></th>
+      <th style="text-align: center"><strong>MsEmoTTS (Proposed)</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -126,7 +126,7 @@
       <th style="text-align: center"><strong>Emotion</strong></th>
       <th style="text-align: center"><strong>Reference</strong></th>
       <th style="text-align: center"><strong>GST</strong></th>
-      <th style="text-align: center"><strong>HiEmoTTS (Proposed)</strong></th>
+      <th style="text-align: center"><strong>MsEmoTTS (Proposed)</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -192,7 +192,7 @@
 
 <br><br>
 <h2>3. Demos -- Emotional speech synthesis by predicting the emotion from input text<a name="prediction"></a></h2>
-<h3>Corresponding to Section 5.2 in our paper, below lists the samples that are synthesized for evaluations on emotion prediction from input text only. We compared HiEmoTTS (proposed) with the TPSE-GST model.</h3>
+<h3>Corresponding to Section 5.2 in our paper, below lists the samples that are synthesized for evaluations on emotion prediction from input text only. We compared MsEmoTTS (proposed) with the TPSE-GST model.</h3>
 
 <table>
   <thead>
@@ -254,7 +254,7 @@
    
   </tbody>
 </table>
-<p><b>Short summary:</b> The higher emotion naturalness MOS scores of HiEmoTTS than TPSE-GST demonstrate that HiEmoTTS is suitable for emotional speech synthesis by predicting the emotion from input text only.</p>
+<p><b>Short summary:</b> The higher emotion naturalness MOS scores of MsEmoTTS than TPSE-GST demonstrate that MsEmoTTS is suitable for emotional speech synthesis by predicting the emotion from input text only.</p>
 
 <br><br>
 <h2>4. Demos -- Emotional speech synthesis by manual control<a name="control"></a></h2>
@@ -373,7 +373,7 @@
     <tr>
       <th style="text-align: center"><strong>Emotion</strong></th>
       <th style="text-align: center"><strong>P-h</strong></th>
-      <th style="text-align: center"><strong>HiEmoTTS (Proposed)</strong></th>
+      <th style="text-align: center"><strong>MsEmoTTS (Proposed)</strong></th>
     </tr>
   </thead>
   <tbody>
